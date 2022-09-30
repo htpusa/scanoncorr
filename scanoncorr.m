@@ -2,8 +2,8 @@ function [A,B,r,U,V] = scanoncorr(X,Y,cx,cy,varargin)
 
 % SCANONCORR Sparse canonical correlation analysis
 %   [A,B,r,U,V] = scanoncorr(X,Y,cx,cy) tries to find sparse canonical
-%   coefficients for the data matrices X and Y an alternating projected 
-%   gradient algorithm.
+%   coefficients for the data matrices X and Y using an alternating
+%   projected gradient algorithm.
 %   cx and cy are regularisation parameters for A and B respectively, such
 %   that the L1-norm of each coefficient vector is equal to cx for A and cy
 %   for B. A smaller value of cx, cy results in more sparsity.
@@ -37,7 +37,7 @@ function [A,B,r,U,V] = scanoncorr(X,Y,cx,cy,varargin)
 %                   columns
 %   B           -   py-by-D matrix with canonical coefficients for Y in
 %                   columns
-%   r           -   1-by-D vector with thesample canonical correlations
+%   r           -   1-by-D vector with the sample canonical correlations
 %   U           -   n-by-D matrix with canonical variables/scores for X in
 %                   columns
 %   V           -   n-by-D matrix with canonical variables/scores for Y in
