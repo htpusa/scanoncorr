@@ -15,7 +15,7 @@ b1 = [zeros(60,1); -ones(20,1); ones(20,1)];
 b2 = [zeros(60,1); ones(10,1); -ones(10,1); ones(10,1); -ones(10,1);];
 
 Z = randn(n,2); W = orth(Z);
-w1 = Z(:,1); w2 = Z(:,2);
+w1 = W(:,1); w2 = W(:,2);
 
 X = normrnd(w1*a1' + w2*a2', 0.09); X = normalize(X);
 Y = normrnd(w1*b1' + w2*b2', 0.09); Y = normalize(Y);
